@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+:root{
+    --text-color: #fff;
+    --blue-color: #00aaff;
+}
+html{
+    font-size: 62%;
+}
+.Home{
+    min-height: 100vh;
+    background-image: url(/background.jpg);
+    background-size: cover;
+    position: relative;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    color: var(--text-color);
+    font-size: 2.4rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 10rem;
+    animation: to_bottom 1s ease forwards;
+}
+
+header nav a{
+    text-decoration: none;
+    color: var(--text-color);
+    transition: .3s;
+    margin-left: 6rem;
+
+}
+
+header nav a:hover,
+header nav .active{
+    color: var(--blue-color);
+
+}
+
+.content-box{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-left: 8rem;
+    z-index: 3;
+    margin-bottom: 20em;
+}
+
+.text-box h1{
+    font-size: 4.5rem;
+    font-weight: 300;
+    animation: to_left 1s ease forwards;
+}
+
+
+
+.text-box .skill{
+    color: var(--blue-color);
+}
+.text-box p{
+    margin: 2.5rem 0;
+    font-size: 1.4rem;
+    animation: to_left 1s ease forwards .2s;
+}
+
+.content-box .icon-box{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-right: 3rem;
+    animation: to_left 1s ease forwards .2s;
+}
+
+.content-box .icon-box ion-icon {
+    color: var(--blue-color);
+    padding: .7rem;
+    font-size: 2.6rem;
+    border: .2rem solid var(--blue-color);
+    border-radius: 50%;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.content-box .icon-box ion-icon:hover{
+    color: var(--text-color);
+    background-color: var(--blue-color);
+    box-shadow: 0 0 1.5rem var(--blue-color);
+}
+
+.text-box .btn{
+    color: var(--text-color);
+    padding: .8rem 2.8rem;
+    border: .2rem solid var(--blue-color);
+    background-color: var(--blue-color);
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: .4rem;
+    transition: .2s;
+    animation: to_left 1s ease forwards .3s;
+}
+.text-box .btn:hover{
+    color: var(--text-color);
+    background-color: var(--blue-color);
+    box-shadow: 0 0 1.5rem var(--blue-color);
+}
+
+@keyframes to_bottom {
+    0%{
+        opacity: 0;
+        transform: translateY(-8rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes to_left {
+    0%{
+        opacity: 0;
+        transform: translateX(8rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
